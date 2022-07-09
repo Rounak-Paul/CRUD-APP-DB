@@ -17,21 +17,21 @@
             <div class="new_user">
                 <div class="form_group">
                     <label for="name" class="text-light">Discord ID</label>
-                    <input type="hidden" name="id" value="">
-                    <input type="text" name="name" value="" placeholder="Duke#0000">
+                    <input type="hidden" name="id" value="<%= user._id %>">
+                    <input type="text" name="name" value="<%= user.name %>" placeholder="Duke#0000">
                 </div>
                 <div class="form_group">
                     <label for="gamertag" class="text-light">Minecraft Username</label>
-                    <input type="text" name="gamertag" value="" placeholder="PlayerAwesome">
+                    <input type="text" name="gamertag" value="<%= user.gamertag %>" placeholder="PlayerAwesome">
                 </div>
                 <div class="form_group">
                     <label for="server" class="text-light">Server</label>
                     <div class="radio inline">
-                        <input type="radio" id="radio-1" name="server" value="SoloCarry">
+                        <input type="radio" id="radio-1" name="server" value="SoloCarry" <%= user.server == 'SoloCarry'?'checked':'' %>>
                         <label for="radio-1" class="radio-label">SoloCarry</label>
                     </div>
                     <div class="radio inline">
-                        <input type="radio" id="radio-2" name="server" value="Cliffhouse">
+                        <input type="radio" id="radio-2" name="server" value="Cliffhouse" <%= user.server == 'Cliffhouse'?'checked':'' %>>
                         <label for="radio-2" class="radio-label">Cliffhouse</label>
                     </div>
                     
@@ -39,15 +39,15 @@
                 <div class="form_group">
                     <label for="pronouns" class="text-light">Pronouns</label>
                     <div class="radio inline">
-                        <input type="radio" id="radio-3" name="pronouns" value="He/Him">
+                        <input type="radio" id="radio-3" name="pronouns" value="He/Him" <%= user.pronouns == 'He/Him'?'checked':'' %>>
                         <label for="radio-3" class="radio-label">He/Him</label>
                     </div>
                     <div class="radio inline">
-                        <input type="radio" id="radio-4" name="pronouns" value="She/Her">
+                        <input type="radio" id="radio-4" name="pronouns" value="She/Her" <%= user.pronouns == 'She/Her'?'checked':'' %>>
                         <label for="radio-4" class="radio-label">She/Her</label>
                     </div>
                     <div class="radio inline">
-                        <input type="radio" id="radio-5" name="pronouns" value="Them">
+                        <input type="radio" id="radio-5" name="pronouns" value="Them" <%= user.pronouns == 'Them'?'checked':'' %>>
                         <label for="radio-5" class="radio-label">Them</label>
                     </div>
                     
@@ -55,11 +55,11 @@
                 <div class="form_group">
                     <label for="status" class="text-light">Status</label>
                     <div class="radio inline">
-                        <input type="radio" id="radio-6" name="status" value="Active">
+                        <input type="radio" id="radio-6" name="status" value="Active" <%= user.status == 'Active'?'checked':'' %>>
                         <label for="radio-6" class="radio-label">Active</label>
                     </div>
                     <div class="radio inline">
-                        <input type="radio" id="radio-7" name="status" value="Inactive">
+                        <input type="radio" id="radio-7" name="status" value="Inactive" <%= user.status == 'Inactive'?'checked':'' %>>
                         <label for="radio-7" class="radio-label">Inactive</label>
                     </div>
                     
